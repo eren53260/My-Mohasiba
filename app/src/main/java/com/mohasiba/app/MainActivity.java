@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebChromeClient;
 
 public class MainActivity extends Activity {
   private WebView w;
@@ -12,6 +13,7 @@ public class MainActivity extends Activity {
     w=new WebView(this);
     setContentView(w);
     w.setWebViewClient(new WebViewClient());
+    w.setWebChromeClient(new WebChromeClient());
     WebSettings s=w.getSettings();
     s.setJavaScriptEnabled(true);
     s.setDomStorageEnabled(true);
